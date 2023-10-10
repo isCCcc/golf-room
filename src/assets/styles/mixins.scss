@@ -1,0 +1,88 @@
+/*
+ * flex 布局
+ * $direction 主轴方向
+ * $justify 水平排列方式
+ * $align 垂直排列方式
+ */
+@mixin flex($direction: row, $align: center, $justify: center ) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+/*
+ * 多行超出省略号
+ * $num 行数
+ */
+@mixin ell($num: 1) {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+  overflow: hidden;
+}
+
+/*
+ * 设置宽高
+ * $width 宽度
+ * $height 高度
+ */
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/*
+ * 字体大小、行高
+ * $size 字体大小
+ * $line-height 行高
+ */
+@mixin fh($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+/*
+ * 字体大小、颜色
+ * $size 字体大小
+ * $color 颜色
+ */
+@mixin sc($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+@mixin rubikVar($weight: 500) {
+  font-family: 'Rubik-Variant';
+  font-weight: $weight;
+  font-variation-settings: "wght" $weight;
+}
+
+@mixin safearea($distance: 0px, $selector: padding-bottom) {
+  #{$selector}: $distance;
+  #{$selector}: calc(#{$distance} + constant(safe-area-inset-bottom));
+  #{$selector}: calc(#{$distance} + env(safe-area-inset-bottom));
+}
+
+@mixin sequence($space, $num) {
+  $size: percentage(calc(1 / $num));
+  width: calc(#{$size} - #{$space} * #{$num - 1} / #{$num});
+  margin-top: $space;
+  margin-right: $space;
+  &:nth-child(-n+#{$num}) {
+    margin-top: 0;
+  }
+  &:nth-child(#{$num}n) {
+    margin-right: 0;
+  }
+}
+
+@mixin bgImage($width, $height, $url) {
+  width: $width;
+  height: $height;
+  background-image: url($url);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

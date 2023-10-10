@@ -1,0 +1,13 @@
+@import './var.scss';
+@import './svg-images.scss';
+
+:export {
+    themeColor: $theme-color;
+    themeSubColor: $sub-color;
+
+    bgColorRed: $bg-col-red;
+
+
+    ico_nav_back: $ico_nav_back;
+    ico_nav_back_light: $ico_nav_back_light;
+}

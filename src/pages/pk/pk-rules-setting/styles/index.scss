@@ -1,0 +1,23 @@
+.w-33 {
+  width: 33%;
+}
+.wrapper {
+  background-color: $white;
+  border-radius: 4rpx;
+}
+
+.add-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #ededed;
+  &::after {
+    height: 100%;
+    content: '+';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50rpx;
+    color: #999999;
+  }
+}

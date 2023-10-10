@@ -1,0 +1,22 @@
+/* 字体大小 */
+@for $i from 10 through 32 {
+  .fs-#{$i * 2} {
+    font-size: 2rpx * $i;
+  }
+}
+
+/* 行高 */ 
+@for $i from 5 through 32 {
+  .lh-#{$i * 2} {
+    line-height: 2rpx * $i;
+  }
+}
+
+.ff-pingfang-sc {
+  font-family: "PingFang SC";
+}
+
+.ff-pingfang-hk {
+  font-family: "PingFang HK";
+}
+

@@ -1,0 +1,44 @@
+{
+  "_from": "x-wxml-to-canvas",
+  "_id": "x-wxml-to-canvas@1.0.4",
+  "_inBundle": false,
+  "_integrity": "sha512-AglAeZCMFVwQDxz3HDFPAALYmGNIFOviCU0kM10vhZRR2RQQgp84VQz8Sj6noYRsn3yC1no8FoKh/2b2v76HKg==",
+  "_location": "/x-wxml-to-canvas",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "x-wxml-to-canvas",
+    "name": "x-wxml-to-canvas",
+    "escapedName": "x-wxml-to-canvas",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmmirror.com/x-wxml-to-canvas/-/x-wxml-to-canvas-1.0.4.tgz",
+  "_shasum": "ced434eb2e57d4b1bcedd2b9b029f726a2bbdabb",
+  "_spec": "x-wxml-to-canvas",
+  "_where": "/Users/standleyyuan/Projects/outsource/wx-GolfRoom",
+  "author": {
+    "name": "xyzgy"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "基于微信小程序 wxml-to-canvas 改版的 uni版本的 html-to-canvas",
+  "keywords": [
+    "uni",
+    "uniapp",
+    "wxml-to-canvas"
+  ],
+  "license": "ISC",
+  "main": "libs/index.js",
+  "name": "x-wxml-to-canvas",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.4"
+}

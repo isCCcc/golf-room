@@ -1,0 +1,437 @@
+/* 颜色 */
+.col-white {
+  color: $white;
+}
+.col-black {
+  color: $black;
+}
+.col-999 {
+  color: $col-999;
+}
+.col-333 {
+  color: $col-333;
+}
+.col-a9 {
+  color: $col-a9;
+}
+.col-a1 {
+  color: $col-a1;
+}
+.col-bd {
+  color: $col-bd;
+}
+.col-b0 {
+  color: $col-b0;
+}
+.theme-color {
+  color: $theme-color;
+}
+.sub-color {
+  color: $sub-color;
+}
+.theme-h-color {
+  color: $theme-h-color
+}
+.col-1e3 {
+  color: $col-1e3;
+}
+.col-c4 {
+  color: $col-c4;
+}
+.col-red {
+  color: $bg-col-red;
+}
+.col-sub {
+  color: $sub-color;
+}
+.col-53 {
+  color: #535353;
+}
+
+/* flex布局 */
+.flex {
+  @include flex(row, center, "");
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+.flex-col {
+  @include flex(column, "", "");
+}
+.flex-start {
+  @include flex(row, center, flex-start);
+}
+.flex-center {
+  @include flex(row, center, center);
+}
+.flex-between {
+  @include flex(row, center, space-between);
+}
+.flex-around {
+  @include flex(row, center, space-around);
+}
+.flex-end {
+  @include flex(row, center, flex-end);
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.d-flex {
+  display: flex;
+}
+@for $i from 1 through 5 {
+  .flex#{$i} {
+    flex: $i;
+  }
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* position定位 */
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.y-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.x-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.xy-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 文字溢出 */
+.text-over {
+  @include ell(1);
+}
+.text-over-2 {
+  @include ell(2);
+}
+
+/* background-color */
+.bg-col-f9 {
+  background-color: $bg-col-f9;
+}
+.bg-white {
+  background-color: $white;
+}
+.bg-theme {
+  background-color: $theme-color;
+}
+
+.over-hid {
+  overflow: hidden;
+}
+
+.over-vsb {
+  overflow: visible;
+}
+.over-scl {
+  overflow: scroll;
+}
+.over-auto {
+  overflow: auto;
+}
+
+/* 页面 */
+.page {
+  position: relative;
+  min-height: 100vh;
+  font-size: 28rpx;
+  background: $bg-col-f9;
+}
+
+/* 粗体 */
+.fw-bol {
+  font-weight: bold;
+}
+.fw-400 {
+  font-weight: 400;
+  font-variation-settings: "wght" 400;
+}
+.fw-500 {
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
+}
+.fw-600 {
+  font-weight: 600;
+  font-variation-settings: "wght" 600;
+}
+
+/* 文字水平线 */
+.va {
+  vertical-align: middle;
+}
+
+/* border-bottom */
+.border-b,
+.border-bn {
+  position: relative;
+  &::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    width: 199.8%;
+    height: 199.7%;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    border-bottom: 1px solid $col-e9;
+    z-index: 2;
+  }
+}
+.border-bn:last-child::after {
+  border-bottom: none;
+}
+
+/* 小圆点样式 */
+.circle {
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 100%;
+  background: #fff;
+}
+.circle-red {
+  background: $bg-col-red;
+}
+
+.circle-green {
+  background-color: $sub-color;
+}
+.circle-gray {
+  background-color: $col-999;
+}
+
+/* 透明度样式 */
+.op-100 {
+  opacity: 1;
+}
+.op-1 {
+  opacity: 0.1;
+}
+.op-2 {
+  opacity: 0.2;
+}
+.op-3 {
+  opacity: 0.3;
+}
+.op-5 {
+  opacity: 0.5;
+}
+.op-7 {
+  opacity: 0.7;
+}
+// 头像
+.g-avatar {
+  background-color: $bg-col-f5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+}
+
+// buttom fixed
+.fixed-bottom {
+  z-index: 50;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: calc(env(safe-area-inset-bottom));
+}
+
+// 文字排版方向
+.tc {
+  text-align: center;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+// 行高
+.lh-0 {
+  line-height: 0;
+}
+.lh-1 {
+  line-height: 1;
+}
+
+// 过度效果
+.trans {
+  transition: all 0.3s;
+}
+
+//spacing
+.px-32 {
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}
+.py-32 {
+  padding-top: 32rpx;
+  padding-bottom: 32rpx;
+}
+
+//w & h
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.h-120 {
+  height: 120rpx;
+}
+
+@mixin nav-back() {
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  backdrop-filter: blur(14.9506px);
+  border-radius: 100%;
+  
+}
+// 返回箭头按钮
+.back-arrow {
+  @include nav-back();
+  background-color: rgba($color: $white, $alpha: 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  .icon-back {
+    margin-left: -2.5px;
+    @include bgImage(8px, 14px, $ico_nav_back)
+  }
+}
+
+.back-arrow-light {
+  @include nav-back();
+  background-color: rgba(217, 217, 217, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  .icon-back {
+    margin-left: -2.5px;
+    @include bgImage(8px, 14px, $ico_nav_back_light)
+  }
+}
+
+// S 三个点loading样式
+.dots-loading {
+  // width: 3.5em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  view {
+    margin: 0 5rpx;
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    background-color: $sub-color;
+    animation: loadingfade 0.8s ease-in-out alternate infinite;
+    &:nth-of-type(1) {
+      animation-delay: -0.4s;
+    }
+    &:nth-of-type(2) {
+      animation-delay: -0.2s;
+    }
+  }
+}
+
+@keyframes loadingfade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+// E 三个点loading样式
+
+// S 圈圈loading样式
+.circle-loading {
+  border: 3px solid hsla(185, 100%, 62%, 0.2);
+  border-top-color: #3cefff;
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+// E 圈圈loading样式
+
+
+// 隐藏元素
+.hide-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 99;
+}
+
+// 自定义导航栏背景图
+.g-nav-bar {
+  .uni-navbar > .uni-navbar__content {
+    background-image: url("https://golf-room.oss-cn-beijing.aliyuncs.com/wx-golf-room/images/rectangle710.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+
+
+@for $i from 1 through 32 {
+  .mt-#{$i * 2} {
+    margin-top: 1rpx * $i * 2;
+  }
+  .mr-#{$i * 2} {
+    margin-right: 1rpx * $i * 2;
+  }
+  .mb-#{$i * 2} {
+    margin-bottom: 1rpx * $i * 2;
+  }
+  .ml-#{$i * 2} {
+    margin-left: 1rpx * $i * 2;
+  }
+}

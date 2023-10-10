@@ -1,0 +1,88 @@
+.modal-wrapper {
+  width: 600rpx;
+  color: $black;
+}
+// S 标题
+.title-wrapper {
+  width: 100%;
+  height: 96rpx;
+  background: url("https://golf-room.oss-cn-beijing.aliyuncs.com/wx-golf-room/images/bg.png")
+    no-repeat center;
+  background-size: 100%;
+  .title-logo {
+    position: absolute;
+    right: 54rpx;
+    width: 96rpx;
+  }
+}
+// E 标题
+
+// S 用户信息
+.user-wrapper {
+  padding: 48rpx;
+  // height: 200rpx;
+  .g-avatar {
+    margin-bottom: 22rpx;
+    position: absolute;
+    top: -120rpx;
+    // border: 2px solid $white;
+    // box-sizing: border-box;
+  }
+  .user-name {
+    margin-top: 22rpx;
+  }
+}
+// E 用户信息
+
+// 当前Tee台
+.tee-wrapper {
+  border-top: 1px solid $col-e9;
+  padding: 33rpx 48rpx 48rpx;
+  .color-cell {
+    padding: 0 26rpx;
+    height: 90rpx;
+    box-sizing: border-box;
+
+  }
+  .color-area {
+    margin-right: 20rpx;
+    width: 34rpx;
+    height: 34rpx;
+    box-sizing: border-box;
+  }
+  .color-current {
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    .icon-arrow {
+      margin-top: 8rpx;
+      width: 18rpx;
+    }
+  }
+  .color-select {
+    position: absolute;
+    top: 90rpx;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    // border-top: 0;
+    background-color: $white;
+    z-index: 10;
+    overflow: hidden;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  .border {
+    border: 1px solid $black;
+  }
+}
+
+// S 底部按钮
+.btn-wrapper {
+  padding: 48rpx;
+  border-top: 1px solid $col-e9;
+  .button {
+    height: 80rpx;
+    line-height: 80rpx;
+  }
+}
+// E 底部按钮

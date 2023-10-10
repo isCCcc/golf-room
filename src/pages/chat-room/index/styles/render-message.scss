@@ -1,0 +1,26 @@
+.chat-cell {
+  margin-bottom: 28rpx;
+  .chat-info {
+    justify-content: flex-end;
+  }
+  .chat-user {
+    margin: 0 23rpx;
+  }
+  .chat-content {
+    padding: 16rpx 22rpx;
+    max-width: 496rpx;
+    line-height: 1.5;
+    background-color: #e4f2ea;
+    border-radius: 8rpx 0 8rpx 0;
+  }
+  .g-avatar {
+    flex: 0 0 $img-size-80;
+    width: $img-size-80;
+    height: $img-size-80;
+  }
+
+  .other-content {
+    border-radius: 0rpx 8rpx 0 8rpx;
+    background-color: #f7f8f8;
+  }
+}

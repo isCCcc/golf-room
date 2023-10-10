@@ -1,0 +1,24 @@
+<!--
+ * @Author: simon
+ * @Description: 
+ * @LastEditors: simon
+-->
+<view id="tab-bar" class="tab-bar {{isMask ? '' : ''  }}" style="--m-bottom:{{ tabMBottom }}">
+  <view class="tab-box">
+    <view class="tab-cell" bindtap="switch" data-type="home" data-url="/pages/tabbar/home/index">
+      <view class="tab-icon icon-home {{tabIndex == 0 ? 'active' : ''  }}">
+        <view class="red-point {{tabBarRedPoints.home ? 'show' : '' }}"></view>
+      </view>
+      <view class="tab-text  {{tabIndex == 0 ? 'tab-text-active' : ''  }}">首页</view>
+    </view>
+    <view class="tab-cell" bindtap="switch" data-type="game" data-url="/pages/chat-room/add-room/index">
+      <view class="tab-img"></view>
+    </view>
+    <view class="tab-cell" bindtap="switch" data-type="info" data-url="/pages/tabbar/profile/index">
+      <view class="tab-icon icon-my {{tabIndex == 1 ? 'active' : ''  }}">
+        <view class="red-point {{tabBarRedPoints.mine > 0 ? 'show' : ''  }}"></view>
+      </view>
+      <view class="tab-text {{tabIndex == 1 ? 'tab-text-active' : ''  }}">我的</view>
+    </view>
+  </view>
+</view>

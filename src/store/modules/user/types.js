@@ -1,0 +1,20 @@
+/*
+ * @Author: simon
+ * @Description: 
+ * @LastEditors: simon
+ */
+
+export const mutationsTypes = {
+  'SET_TOKEN': 'SET_TOKEN',
+  'SET_USER_INFO': 'SET_USER_INFO',
+  'SET_USER_ACOUNT': 'SET_USER_ACOUNT',
+  'SET_USER_COMPETITION_RECORD': 'SET_USER_COMPETITION_RECORD'
+}
+
+export const actionsTypes = {
+  'GET_TOKEN': 'GET_TOKEN',
+  'GET_USER_INFO': 'GET_USER_INFO',
+  'CLEAR_LOGIN_INFO': 'CLEAR_LOGIN_INFO',
+  'UPDATE_USER_INFO': 'UPDATE_USER_INFO',
+  'GET_USER_COMPETITION_RECORD': 'GET_USER_COMPETITION_RECORD'
+}

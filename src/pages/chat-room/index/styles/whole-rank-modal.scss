@@ -1,0 +1,161 @@
+.modal-wrapper {
+  width: 645rpx;
+}
+// S 标题
+.title-wrapper {
+  background: url("https://golf-room.oss-cn-beijing.aliyuncs.com/wx-golf-room/images/rectangle709.png")
+    no-repeat center;
+  background-size: 100%;
+  width: 100%;
+  height: 112rpx;
+  .logo-wrapper {
+    top: -22rpx;
+    left: 13rpx;
+    min-width: 139rpx;
+    height: 116rpx;
+    background-color: #19383c;
+    border-radius: 4rpx;
+    .logo-img {
+      width: 108rpx;
+    }
+  }
+  .title-content {
+    margin-left: 30rpx;
+    padding-right: calc(76rpx + 8rpx) // 76 rpx 删除按钮的宽度
+  }
+  .icon-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 76rpx;
+  }
+}
+// E 标题
+
+// S 表格
+.table-wrapper {
+  // 表头
+  .table-header {
+    height: 60rpx;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #224641 0%, #003c3d 100%);
+    box-shadow: 0px 4rpx 4rpx rgba(0, 0, 0, 0.14);
+    backdrop-filter: blur(10rpx);
+    @include rubikVar();
+    &-rank {
+      // padding-left: 17rpx;
+      flex: 0 0 80rpx;
+    }    
+	&-group {
+      flex: 0 0 80rpx;
+    }
+    &-total {
+      flex: 0 0 104rpx;
+    }
+    &-part {
+      flex: 0 0 128rpx;
+    }
+  }
+
+  // 表体
+  .table-body {
+    background-color: #284743;
+    // max-height: 910rpx;
+    // min-height: 500rpx;
+    height: 910rpx;
+    @include rubikVar();
+    .list-cell {
+      height: 90rpx;
+      // border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      box-sizing: border-box;
+      &:nth-child(odd) {
+        background-color: rgba(255, 255, 255, 0.02);
+      }
+      // &:last-child {
+      //   border-bottom: 0;
+      // }
+      &-info {
+        // margin-right: 80rpx;
+		.tee {
+			height: 16rpx;
+			width: 4rpx;
+			margin-right: 4rpx;
+			flex: 0 0 4rpx;			
+		}
+        .g-avatar {
+          margin: 0 15rpx 0 4rpx;
+          flex: 0 0 $img-size-50;
+          width: $img-size-50;
+          height: $img-size-50;
+        }
+		.gender-box {
+			display: flex;
+			flex: 0 0 20rpx;
+			width: 20rpx;
+			height: 20rpx;
+			background: rgba(0, 0, 0, 0.3);
+			backdrop-filter: blur(15rpx);
+			border-radius: 50%;
+			margin-left: 4rpx;
+		}
+		.icon-gender {
+			display: block;
+			width: 12rpx;
+			height: 12rpx;
+			margin: auto auto;
+		}
+      }
+      &-total {
+        height: 100%;
+        background-color: rgba($color: #7eb468, $alpha: 0.2);
+      }
+	  &-group {
+		  flex: 0 0 60rpx;
+		  font-size: 20rpx;
+		  opacity: 0.7;
+		  font-weight: 400;
+		  text-align: right;
+		  padding-right: 16rpx;
+	  }
+      .complete-num {
+        color: #FFFA79;
+      }
+    }
+  }
+}
+// E 表格
+
+// S loading 样式
+.loadding-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80rpx;
+  .dots-loading {
+    .dots-view {
+      width: 15rpx;
+      height: 15rpx;
+    }
+  }
+}
+// E loading 样式
+
+// 生成长图按钮
+.gen-share-image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 90rpx;
+  left: 0;
+  bottom: 0;
+  background: #95D171;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #284743;
+  image {
+    width: 43rpx;
+    height: 34rpx;
+    margin-right: 8rpx;
+  }
+}

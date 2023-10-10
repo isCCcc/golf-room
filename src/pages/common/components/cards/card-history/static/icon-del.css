@@ -1,0 +1,5 @@
+.icon-del {
+	background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 6V4H23.5V6M4 8.5H32M29.5 9V32H7V9.5M14.5 12V25.5M22 12V25.5' stroke='%23FF7777' stroke-width='2'/%3E%3C/svg%3E%0A");
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+}

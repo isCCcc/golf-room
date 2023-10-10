@@ -1,0 +1,302 @@
+{
+  "insetLoader": {
+    "config": {
+      "gr-auth-popup": "<GrAuthPopup ref='grAuthPopup' />"
+    },
+    // 全局配置
+    "label": ["gr-auth-popup"],
+    "rootEle": "view"
+  },
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/tabbar/home/index",
+      "style": {
+        "navigationBarTitleText": "首页",
+        "navigationStyle": "custom",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/tabbar/profile/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom",
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/tabbar/profile/UserProfile",
+      "style": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": false,
+        "disableScroll": true
+      }
+    },
+    {
+      "path": "pages/tabbar/profile/editUser/index",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/chat-room",
+      "pages": [
+        {
+          "path": "index/index",
+          "style": {
+            "navigationStyle": "custom",
+            "disableScroll": true
+          }
+        },
+        {
+          "path": "add-room/index",
+          "style": {
+            "navigationBarTitleText": "创建球局",
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "add-room/edit-competitor/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "add-room/share/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "caddie/invite/index",
+          "style": {
+            "navigationStyle": "custom",
+            "label": [] // 清空插入，不配置全局弹窗，自定义授权弹窗
+          }
+        },
+        {
+            "path" : "landscape/index",
+            "style" : {
+                "navigationStyle" : "custom",
+                "pageOrientation" : "landscape",
+                "disableScroll" : true
+            }
+        },
+        {
+          "path": "personal-score/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "personal-score/share/index",
+          "style": {
+            "navigationStyle": "custom",
+            "navigationBarTitleText": "保存到相册",
+            "enablePullDownRefresh": false,
+            "navigationBarBackgroundColor":"#1A2828",
+            "navigationBarTextStyle": "white"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/pk",
+      "pages": [
+        {
+          "path": "pk-rules-list/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "pk-rules-setting/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "pk-score/index",
+          "style": {
+            "navigationStyle": "custom",
+            "disableScroll": true
+          }
+        },
+        {
+          "path": "pk-holes-setting/index",
+          "style": {
+            "navigationStyle": "custom",
+            "disableScroll": true
+          }
+        },
+        {
+          "path": "pk-departure-rank/index",
+          "style": {
+            "navigationStyle": "custom",
+            "disableScroll": true
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/common",
+      "pages": [
+        {
+          "path": "court/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "court/half/index",
+          "style": {
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "more/More",
+          "style": {
+            "disableScroll": true,
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "message/MessageList",
+          "style": {
+            "navigationStyle": "custom",
+            "disableScroll": true
+          }
+        },
+        {
+          "path": "friend/Friends",
+          "style": {
+            "navigationStyle": "custom",
+            "disableScroll": true
+          }
+        },
+        {
+          "path": "avatar/crop/index",
+          "style": {
+            "navigationStyle": "custom",
+            "app-plus": {
+              "animationType": "none", //动画效果
+              "background": "transparent", //背景透明
+              "backgroundColor": "rgba(0,0,0,0)", //背景透明
+              "popGesture": "none" //禁止苹果侧滑返回
+            }
+          }
+        },
+        {
+          "path": "image/ImageCrop",
+          "style": {
+            "navigationStyle": "custom",
+            "app-plus": {
+              "animationType": "none", //动画效果
+              "background": "transparent", //背景透明
+              "backgroundColor": "rgba(0,0,0,0)", //背景透明
+              "popGesture": "none" //禁止苹果侧滑返回
+            }
+          }
+        },
+        {
+          "path": "search/Search",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false,
+            "disableScroll": true
+          }
+        },
+        {
+          "path": "im/conversation",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false,
+            "disableScroll": true,
+            "navigationBarBackgroundColor": "#000",
+            "navigationBarTextStyle": "black"
+          }
+        },
+        {
+          "path": "profile/historyList/index",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false,
+            "disableScroll": true,
+            "onReachBottomDistance": 50
+          }
+        },
+        {
+          "path": "profile/watchedList/index",
+          "style": {
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": false,
+            "disableScroll": true,
+            "onReachBottomDistance": 50
+          }
+        },
+        {
+            "path" : "profile/playedTimesYear/index",
+            "style" : {
+                "navigationStyle" : "custom",
+                "enablePullDownRefresh" : false,
+                "disableScroll" : true,
+                "onReachBottomDistance" : 50
+            }
+        },
+        {
+            "path" : "profile/playedTimesMonth/index",
+            "style" : {
+                "navigationStyle" : "custom",
+                "enablePullDownRefresh" : false,
+                "onReachBottomDistance" : 50
+            }
+        },
+        {
+            "path" : "profile/playedCourseList/index",
+            "style" : {
+                "navigationStyle" : "custom",
+                "enablePullDownRefresh" : false,
+                "disableScroll" : true,
+                "onReachBottomDistance" : 50
+            }
+        }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/tabbar/home/index": {
+      "network": "all",
+      "packages": ["pages/chat-room", "pages/common"]
+    },
+    "pages/tabbar/profile/index": {
+      "network": "all",
+      "packages": ["pages/common"]
+    }
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "golfroom",
+    "navigationBarBackgroundColor": "#F5F5F5",
+    "backgroundColor": "#F5F5F5"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabbar/profile/index",
+        "text": "我的"
+      }
+    ]
+  }
+}

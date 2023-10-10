@@ -1,0 +1,232 @@
+.borad-wrapper {
+  background-color: #173B3C;
+}
+
+.w-0 {
+  width: 0;
+}
+
+.bg-top-common {
+  position: absolute;
+  width: 100%;
+  // min-height: 364rpx;
+  background: url("https://golf-room.oss-cn-beijing.aliyuncs.com/wx-golf-room/images/bg_top_new.png");
+  background-size: 100% 100%
+}
+
+.nav-title-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6rpx;
+}
+
+.nav-center-part {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10rpx;
+
+  .copy-btn {
+    @include bgImage(40rpx, 26rpx, 'https://golf-room.oss-cn-beijing.aliyuncs.com/wx-golf-room/icons/ico_chat_room_copy.png')
+  }
+}
+
+// S 计分板样式1
+.expend-score-table {
+overflow: hidden;
+}
+.table-wrapper {
+  border-left: 4rpx solid $sub-color;
+  background-image: url('../../../../../static/images/bg-scoreboard.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  overflow: hidden;
+  .table-left {
+    width: 140rpx;
+    flex: 0 0 140rpx;
+    box-sizing: border-box;
+    .left-th-cell {
+      padding-left: 24rpx;
+      height: 83rpx;
+      @include rubikVar();
+    }
+    .left-td-cell {
+      padding-left: 24rpx;
+      // border-top: 1rpx solid rgba($color: #fff, $alpha: 0.1);
+      height: 100rpx;
+      box-sizing: border-box;
+      &:nth-child(even) {
+        background: rgba($color: $bg-col-f5, $alpha: 0.1);
+      }
+      // 头像
+      .table-avatar {
+        position: absolute;
+      }
+
+      // tee
+      .tee-wrapper {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 4rpx;
+      }
+      // 总分
+      .score-wrapper {
+        width: 90rpx;
+        height: 44rpx;
+        margin-left: 22rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 103.85%);
+      }
+    }
+  }
+  .table-right-wrapper {
+    flex: 1;
+    overflow-x: auto;
+
+  }
+  .table-right-content {
+    width: 100%;
+    white-space: nowrap;
+    .right-th-cell {
+      flex: 0 0 100rpx;
+      width: 100rpx;
+      height: 83rpx;
+      @include rubikVar();
+      .hole-no {
+        margin-bottom: 5rpx;
+      }
+    }
+    .right-td-cell {
+      position: relative;
+      flex: 0 0 100rpx;
+      width: 100rpx;
+      height: 100%;
+      flex: 0 0 100rpx;
+      box-sizing: border-box;
+      @include rubikVar();
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 58rpx;
+        width: 1rpx;
+        background-color: rgba($color: #fff, $alpha: 0.1);
+      }
+      &:nth-child(9),&:nth-child(10),&:nth-child(19),&:nth-child(20),&:nth-child(21),&:last-child {
+        &::after {
+          display: none;
+        }
+      }
+      .circle {
+        position: absolute;
+        bottom: 10rpx;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    
+    .right-td-push {
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 77rpx;
+        width: 1rpx;
+        background-color: rgba($color: #fff, $alpha: 0.1);
+      }
+    }
+    
+    .right-tr-cell {
+      height: 100rpx;
+      box-sizing: border-box;
+      // border-top: 1rpx solid rgba($color: #fff, $alpha: 0.1);
+      width: fit-content;
+      .td-total-score {
+        background-color: rgba($color: #1e3e42, $alpha: 1);
+      }
+      &:nth-child(even) {
+        background: rgba($color: $bg-col-f5, $alpha: 0.1);
+        .td-total-score {
+          background-color: rgba($color: #1e3e42, $alpha: 0.5);
+        }
+      }
+    }
+
+    .bg-op1 {
+      background: rgba($color: $bg-col-f5, $alpha: 0.1);
+    }
+    // 网络异常样式
+    .unusual {
+      background-color: yellow;
+      color: red;
+      border-right: 1rpx solid #000;
+    }
+    .unset-flex-center {
+      flex-direction: column;
+      justify-content: unset;
+    }
+    .push-box {
+      position: absolute;
+      left: 24rpx;
+      bottom:2rpx;
+      opacity: 0.6;
+    }
+  }
+}
+// E 计分板样式1
+
+.h-110 {
+  height: 110rpx!important;
+}
+
+// S 计分板样式2
+// 半场的渐变色
+.th-half,
+.td-half-0,
+.td-half-1 {
+  background: linear-gradient(
+    180deg,
+    rgba(149, 209, 113, 0.1) 100%,
+    rgba(149, 209, 113, 0.1) 100%
+  );
+}
+
+.td-half-2,
+.td-half-3,
+.th-diff,
+.td-diff-0,
+.td-diff-1 {
+  background: linear-gradient(
+    180deg,
+    rgba(149, 209, 113, 0.2) 100%,
+    rgba(149, 209, 113, 0.2) 100%
+  );
+}
+
+.td-diff-2,
+.td-diff-3 {
+  background: linear-gradient(
+    180deg,
+    rgba(149, 209, 113, 0.4) 100%,
+    rgba(149, 209, 113, 0.4) 100%
+  );
+}
+.th-total-score {
+  background-color: $col-1e3;
+}
+
+// E 计分板样式2

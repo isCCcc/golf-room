@@ -1,0 +1,39 @@
+// S 输入框
+.empty-box {
+  height: calc(120rpx + env(safe-area-inset-bottom));
+}
+.send-wrapper {
+  margin-bottom: var(--bottom-height);
+  height: 120rpx;
+  padding: 20rpx 28rpx;
+  // padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+  background-color: #f4f4f4;
+  border-top: 1px solid #e9e9e9;
+  box-sizing: border-box;
+  .input-wrapper {
+    padding: 0 20rpx;
+    background-color: $white;
+    border-radius: 4rpx;
+    height: 78rpx;
+    .emoji-wrapper {
+      flex: 0 0 70rpx;
+      width: 70rpx;
+      .icon-face {
+        width: 44rpx;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .tool-wrapper {
+    margin-left: 27rpx;
+    .tool-pk {
+      flex: 0 0 54rpx;
+      width: 54rpx;
+    }
+    .tool-add {
+      flex: 0 0 52rpx;
+      width: 52rpx;
+    }
+  }
+}
+// E 输入框

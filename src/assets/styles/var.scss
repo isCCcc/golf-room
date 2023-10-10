@@ -1,0 +1,56 @@
+/**
+ * 	这里是前端自定义的常用样式变量，后续可根据业务需求自行添加常用样式变量
+ * 	已在uni.scss里import
+ * 
+ *  1. 浅灰色字体统一使用$col-a9;
+ * 	2. 输入框的placeholder统一使用$col-placeholder;
+ */
+
+
+/* 主题颜色 */
+$theme-color: #003C3D;
+$sub-color: #95D171;
+$theme-h-color: #429461;
+
+
+/* 背景基本颜色 */
+$bg-col-f5: #f5f5f5;
+$bg-col-f6: #f6F7F9;
+$bg-col-f7: #f7f7f7;
+$bg-col-f9: #f9f9f9;
+$bg-col-tag-active: #ecf8F9;
+$bg-col-red: #FF6A6A;
+
+
+/* 文字基本颜色 */
+$black: #000;
+$white: #fff;
+$col-999: #999;
+$col-333: #333;
+$col-a9: #a9a9a9;
+$col-a1: #a1a1a1;
+$col-bd: #BDBDBD;
+$col-b0:#B0B0B0;
+$col-placeholder: $col-999;
+$col-1e3 : #1E3E42;
+$col-e9: #E9E9E9;
+$col-c4: #C4C4C4;
+
+
+ 
+/* 边框基本颜色 */
+$br-col-ed: #ededed;
+$br-col-e6: #e6e6e6;
+
+
+/* 图片尺寸 */
+$img-size-40:40rpx;
+$img-size-50:50rpx;
+$img-size-64:64rpx;
+$img-size-80:80rpx;
+$img-size-100:100rpx;
+$img-size-120:120rpx;
+
+
+
+

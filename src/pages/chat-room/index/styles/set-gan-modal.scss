@@ -1,0 +1,149 @@
+.popup-content-root {
+  max-height: var(--max-height);
+}
+
+// S 标题
+.title-wrapper {
+  line-height: 112rpx;
+  text-align: center;
+  
+  @include rubikVar(500);
+
+  .close-btn {
+    position: absolute;
+    @include bgImage(76rpx, 62rpx, 'https://golf-room.oss-cn-beijing.aliyuncs.com/wx-golf-room/icons/svgs/ico_auth_popup_close.svg');
+
+    top: 0rpx;
+    right: 0rpx;
+  }
+}
+// E标题
+
+// S 列表
+.list-wrapper {
+  overflow: scroll;
+  
+  .cell {
+
+    border: 2rpx solid #eeeeee;
+    border-radius: 8rpx;
+
+    background-color: #fff;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32rpx;
+    line-height: 32rpx;
+
+    color: rgba(0, 0, 0, 0.9);
+
+    @mixin arrow-bg {
+      @include bgImage(20rpx, 15rpx, "data:image/svg+xml,%3Csvg width='20' height='15' viewBox='0 0 20 15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.178 14.314a1 1 0 0 0 1.644 0l8.483-12.245A1 1 0 0 0 18.483.5H1.517a1 1 0 0 0-.822 1.57l8.483 12.244z' fill='%2395D171' fill-rule='nonzero'/%3E%3C/svg%3E");
+    }
+
+    // 计数器 (共同部分)
+    .number-box {
+      $border-radius: 4rpx;
+      $height: 58rpx;
+      &-square {
+        width: 58rpx;
+        height: $height;
+        border-radius: $border-radius;
+        color: $theme-color;
+        background-color: $col-e9;
+        font-weight: bold;
+        font-size: 40rpx;
+        text {
+          margin-top: -5rpx; // 提升高度，在 iOS 开起来居中
+        }
+      }
+      &-value {
+        margin: 0 2rpx;
+        width: 84rpx;
+        height: $height;
+        border-radius: $border-radius;
+        background-color: $bg-col-f9;
+        color: $black;
+      }
+    }
+
+    // 基础部分
+    .cell-basic {
+      // min-height: 136rpx;
+      padding: 28rpx;
+
+      .separator {
+        margin: 0 24rpx;
+        min-width: 1px;
+        width: 1rpx;
+        height: 60rpx;
+        background-color: #E9E9E9;
+      }
+
+      .expand-btn {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28rpx;
+        line-height: 39rpx;
+        color: #191919;
+
+        gap: 8rpx;
+        .arrow {
+          @include arrow-bg;
+        }
+      }
+    }
+    // 展开部分
+    .cell-expand {
+      .push {
+        padding: 28rpx;
+      }
+      .fairway {
+        padding: 28rpx;
+        .fairway-btns {
+          margin-right: -12rpx; // 对齐右边
+          .f-state {
+            .f-state-icon {
+              width: 60rpx;
+              height: 60rpx;
+              margin-left: 12rpx;
+              margin-right: 12rpx;
+              border-radius: 999999rpx;
+              box-sizing: border-box;
+
+              background-image: var(--bg-image);
+              background-size: 100%;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+      .collapse-btn {
+        height: 96rpx;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28rpx;
+        line-height: 39rpx;
+        color: #191919;
+        .arrow {
+          @include arrow-bg;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+// E 列表
+
+// S 底部按钮
+.footer-btn {
+  padding: 30rpx 32rpx var(--bottom-inset) 32rpx;
+  background-color: #fff;
+  .reset-btn {
+    color: #C73C3C;
+    border: 1px solid $theme-color;
+    margin-right: 20rpx;
+    flex: 0 0 228rpx;
+  }
+}
+// E 底部按钮
